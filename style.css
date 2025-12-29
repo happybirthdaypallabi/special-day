@@ -1,0 +1,75 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top,#ffe0f0,transparent 60%),
+    linear-gradient(180deg,#ffb3d9,#b983ff,#7f7cff);
+  color:#fff;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* INTRO */
+.intro{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+.intro h1{font-size:42px;text-shadow:0 0 20px #fff}
+.intro h2{font-size:36px;margin-top:10px}
+.intro h3{font-size:24px;margin:10px 0 30px}
+.intro button{
+  padding:16px 36px;
+  font-size:18px;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(135deg,#fff,#ffe3f3);
+  color:#d63384;
+  font-weight:600;
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+
+/* CAKE */
+.cake-section{padding:30px}
+.cake{width:220px;margin:20px auto;position:relative;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+.layer{width:100%;height:55px;border-radius:22px}
+.top{background:linear-gradient(#fff0f8,#ff9ecf)}
+.mid{background:linear-gradient(#ff9ecf,#ff5fa2);margin-top:-10px}
+.bottom{background:linear-gradient(#ff5fa2,#d63384);margin-top:-10px}
+
+.candles{
+  position:absolute;top:-42px;width:100%;
+  display:flex;flex-wrap:wrap;justify-content:center
+}
+.candle{
+  width:7px;height:28px;background:#fff;
+  border-radius:4px;margin:3px;cursor:pointer;position:relative
+}
+.candle.on::after{
+  content:"🔥";position:absolute;top:-22px;left:-6px;
+  animation:flicker .5s infinite alternate
+}
+@keyframes flicker{to{transform:scale(1.3)}}
+
+button{margin:10px;padding:14px 30px;border:none;border-radius:40px;font-size:17px}
+.hidden{display:none}
+
+/* LETTER */
+.letter{padding:50px 20px 80px}
+#letterText{font-size:25px;line-height:2.2;white-space:pre-line}
+
+/* FIREWORK */
+.firework{
+  position:fixed;font-size:30px;
+  animation:boom 1.2s ease-out forwards
+}
+@keyframes boom{
+  to{transform:translateY(-150px) scale(1.5);opacity:0}
+}
