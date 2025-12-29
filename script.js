@@ -1,12 +1,19 @@
+const music = document.getElementById("bgMusic");
+
 const intro = document.getElementById("intro");
+const photos = document.getElementById("photos");
 const cakeSection = document.getElementById("cakeSection");
 const letter = document.getElementById("letter");
-const music = document.getElementById("bgMusic");
 
 // START
 document.getElementById("startBtn").onclick = () => {
-  music.play(); // 🔥 mobile safe
+  music.play(); // ✅ mobile safe
   intro.classList.add("hidden");
+  photos.classList.remove("hidden");
+};
+
+document.getElementById("goCake").onclick = () => {
+  photos.classList.add("hidden");
   cakeSection.classList.remove("hidden");
 };
 
@@ -105,4 +112,3 @@ function typeWriter(){
     setTimeout(typeWriter,35);
   }
 }
-
