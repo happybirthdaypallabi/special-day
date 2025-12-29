@@ -1,7 +1,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Poppins',sans-serif;
+  font-family:Poppins,sans-serif;
   background:linear-gradient(180deg,#ffb3d9,#b983ff,#7f7cff);
   color:#fff;
   text-align:center;
@@ -15,17 +15,23 @@ body{
   justify-content:center;
   padding:24px;
 }
-.intro h1{font-size:42px;margin-bottom:12px}
-.intro h2{font-size:36px;margin-bottom:8px}
-.intro h3{font-size:24px;margin-bottom:30px}
-.intro button{
-  padding:16px 36px;
-  font-size:18px;
-  border:none;
-  border-radius:40px;
-  background:#fff;
-  color:#c9184a;
-  font-weight:600;
+.intro h1{font-size:42px}
+.intro h2{font-size:36px}
+.intro h3{font-size:24px;margin:12px 0 30px}
+
+/* PHOTOS */
+.photos{padding:30px}
+.gallery{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.gallery img{
+  width:140px;
+  height:180px;
+  object-fit:cover;
+  margin:8px;
+  border-radius:16px;
 }
 
 /* CAKE */
@@ -33,10 +39,8 @@ body{
 .cake{
   width:220px;
   margin:30px auto;
-  position:relative;
 }
 .layer{
-  width:100%;
   height:56px;
   border-radius:24px;
 }
@@ -48,7 +52,6 @@ body{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  margin-bottom:10px;
 }
 .candle{
   width:8px;
@@ -63,8 +66,16 @@ body{
   margin-top:-22px;
 }
 
+/* LETTER */
+.letter{padding:40px}
+#letterText{
+  font-size:24px;
+  line-height:2.1;
+  white-space:pre-line;
+}
+
 button{
-  margin:10px;
+  margin:12px;
   padding:14px 28px;
   border:none;
   border-radius:32px;
@@ -73,15 +84,7 @@ button{
 
 .hidden{display:none}
 
-/* LETTER */
-.letter{padding:40px 24px}
-#letterText{
-  font-size:24px;
-  line-height:2.1;
-  white-space:pre-line;
-}
-
-/* MOBILE EXTRA SAFE */
+/* MOBILE */
 @media(max-width:480px){
   .intro h1{font-size:38px}
   .intro h2{font-size:32px}
